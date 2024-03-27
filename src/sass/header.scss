@@ -1,0 +1,68 @@
+%link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+header {
+  background-color: #F9F5F6;
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+
+    a {
+      @extend %link;
+
+      h1 {
+        font-size: 1rem;
+        font-weight: 800;
+        margin-top: 0.3rem;
+      }
+    }
+
+    .cart-section {
+      display: none;
+
+      .cart {
+        width: 0.8rem;
+        height: 0.8rem;
+        cursor: pointer;
+      }
+    }
+
+    .ul {
+      display: block;
+      text-align: center;
+      position: absolute;
+      top: 5rem;
+      list-style-type: none;
+      width: 100%;
+      transition: 500ms ease-in-out;
+      z-index: 1;
+      
+
+
+      li {
+        padding: 0.5rem 1rem;
+        background-color: white;
+        border: 1px solid #F8E8EE;
+        transition: 400ms ease-in-out;
+        
+        a {
+          @extend %link
+        }
+
+      }
+
+      li:hover {
+        background-color: #F8E8EE;
+        border-radius: 0.5rem;
+        transition: 0.7ms ease;
+      }
+    }
+  }
+}
