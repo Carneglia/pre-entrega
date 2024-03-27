@@ -1,4 +1,6 @@
-function Main() {
+import UserCard from "./UserCard";
+
+function ItemListContainer() {
     return (
         <main>
             <section>
@@ -10,8 +12,10 @@ function Main() {
                     </div>
                 </article>
             </section>
+            <UserCard name ="Carlos" age={31} stars={5} feedback="Amazing!! Maju is really patience and kind, I'm in!!"/>
+            <UserCard name ="Pablo" age={35} />
 
         </main>
     )
 }
-export default Main;
+export default ItemListContainer;

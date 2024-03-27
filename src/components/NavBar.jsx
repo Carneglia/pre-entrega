@@ -1,7 +1,8 @@
 import { useState } from "react";
+import CartWidget from "./CartWidget";
 
 
-function Header() {
+function NavBar() {
 
 const [toggle, setToggle] = useState(false)
 
@@ -16,13 +17,11 @@ const [toggle, setToggle] = useState(false)
            <li><a href="#">Contacto</a></li>
          </ul>
         )}
-        <section className="cart-section">
-          <img className="cart" src="/images/cart.png" alt="Carrito de compras" /><span>0</span>
-        </section>
+       <CartWidget/>
         <img onClick={() => setToggle(!toggle)} className="menu-burguer" src="/images/menu-burguer.png" alt="menú en tamaños de pantalla pequeños" />
       </nav>
     </header>
   )
 }
-export default Header;
+export default NavBar;
 
